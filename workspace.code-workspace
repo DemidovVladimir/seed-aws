@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "✨ @republik/reward-service",
+			"path": "."
+		},
+		{
+			"name": "🚀 app",
+			"path": "app"
+		},
+		{
+			"name": "infra",
+			"path": "infra"
+		}
+	],
+	"settings": {
+		"window.title": "reward-service"
+	}
+}

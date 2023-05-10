@@ -1,0 +1,48 @@
+{
+  "name": "@republik/reward-service",
+  "version": "1.0.0",
+  "description": "RepubliK Reward Distribution Service REST API",
+  "main": "index.js",
+  "repository": "git@github.com:republik-io/user-service.git",
+  "author": "Denis Zatsepin <denis@zatsepin.me>",
+  "license": "UNLICENSED",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "infra",
+      "app"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
+    "@commitlint/top-level": "17.0.0",
+    "@tsconfig/node16": "1.0.3",
+    "@typescript-eslint/eslint-plugin": "5.38.1",
+    "@typescript-eslint/parser": "5.38.1",
+    "dotenv": "16.0.3",
+    "eslint": "8.30.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jest": "27.1.7",
+    "eslint-plugin-n": "15.6.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-standard": "5.0.0",
+    "husky": "8.0.2",
+    "lint-staged": "13.1.0",
+    "prettier": "2.8.1",
+    "typescript": "4.9.4"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "infra/**/*.{js,md,html,json}": "yarn workspace infra prettier --write",
+    "infra/**/*.ts": "yarn workspace infra eslint --cache --fix",
+    "app/**/*.{js,md,html,json}": "yarn workspace app prettier --write",
+    "app/**/*.ts": "yarn workspace app eslint --cache --fix"
+  }
+}
